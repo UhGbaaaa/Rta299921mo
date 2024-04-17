@@ -5,10 +5,12 @@ local window = kavoUi.CreateLib("BysusKhmer","BloodTheme")
  
 local Tab1 = window:NewTab("All Game")
 local Tab1Section = Tab1:NewSection("Bysuskhmer")
-local Tab2 = window:NewTab("Survive the Killer ")
-local Tab2Section = Tab2:NewSection("OP SCRIPT")
+local Tab2 = window:NewTab("Game ")
+local Tab2Section = Tab2:NewSection("🗡️🔍")
 local Tab3 = window:NewTab("Settings")
 local Tab3Section = Tab3:NewSection("Roblox Settings")
+local Tab4 = window:NewTab("Script Bypass")
+local Tab4Section = Tab4:NewSection("ByPass & FreePass")
 
 --
  
@@ -34,9 +36,10 @@ loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
 
 end) 
 
-Tab2Section:NewButton("Opne Hack","LikeAndSubscribe",function()
+Tab2Section:NewButton("MM2 SCRIPT","LikeAndSubscribe",function()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Milan08Studio/ChairWare/main/main.lua"))()
+
+loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
 
 end) 
 
@@ -200,5 +203,17 @@ end)
  Tab3Section:NewButton("Show ShiftLock","LikeAndSubscribe",function()
  
  loadstring(game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/shiftlock/main/shiftlock"))();
+ 
+ end) 
+ 
+ Tab1Section:NewButton("keyboard","LikeAndSubscribe",function()
+ 
+ loadstring(game:HttpGet("https://gist.githubusercontent.com/RedZenXYZ/4d80bfd70ee27000660e4bfa7509c667/raw/da903c570249ab3c0c1a74f3467260972c3d87e6/KeyBoard%2520From%2520Ohio%2520Fr%2520Fr"))()
+ 
+ end) 
+ 
+ Tab3Section:NewButton("animations","Pro",function()
+ 
+ loadstring(game:HttpGet("https://gist.githubusercontent.com/RedZenXYZ/4d80bfd70ee27000660e4bfa7509c667/raw/da903c570249ab3c0c1a74f3467260972c3d87e6/KeyBoard%2520From%2520Ohio%2520Fr%2520Fr"))()
  
  end) 
