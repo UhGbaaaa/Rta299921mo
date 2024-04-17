@@ -1,219 +1,174 @@
-local kavoUi = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
-local window = kavoUi.CreateLib("BysusKhmer","BloodTheme")
- 
----Hi
- 
-local Tab1 = window:NewTab("All Game")
-local Tab1Section = Tab1:NewSection("Bysuskhmer")
-local Tab2 = window:NewTab("Game ")
-local Tab2Section = Tab2:NewSection("🗡️🔍")
-local Tab3 = window:NewTab("Settings")
-local Tab3Section = Tab3:NewSection("Roblox Settings")
-local Tab4 = window:NewTab("Script Bypass")
-local Tab4Section = Tab4:NewSection("ByPass & FreePass")
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Tutorial Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
---
- 
-Tab1Section:NewButton("Speed 64","LikeAndSubscribe",function()
- 
-local WalkSpeed = 64
- 
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 64
- 
-end) 
 
-Tab1Section:NewButton("Speed 32","LikeAndSubscribe",function()
+-- player tab
 
-local WalkSpeed = 32
+local PlayerTab = Window:MakeTab({
+ Name = "Player",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+
+local Section = PlayerTab:AddSection({
+ Name = "Movement"
+})
+
+
+local OtherTab = Window:MakeTab({
+ Name = "Game ",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+
+local Section = OtherTab:AddSection({
+ Name = "Game"
+})
+
+
+local new = Window:MakeTab({
+ Name = "New Script ⌚",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+
+local Section = new:AddSection({
+ Name = "Script New Game !! "
+})
+
+PlayerTab:AddButton({
+ Name = "NoClip",
+ Callback = function()
+
+   end    
+})
+
+PlayerTab:AddButton({
+ Name = "Fly",
+ Callback = function()
+       loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
+   end    
+})
+
+PlayerTab:AddButton({
+ Name = "Emojis",
+ Callback = function()
+       loadstring(game:HttpGet("https://pastebin.com/raw/eCpipCTH"))()
+   end    
+})
+
+PlayerTab:AddButton({
+ Name = "Skill Play",
+ Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
+   end    
+})
+
+PlayerTab:AddButton({
+ Name = "ESP",
+ Callback = function()
+       loadstring(game:HttpGet"https://gitlab.com/te4224/Scripts/-/raw/main/Universal%20Aimbot%20N%20Esp/v2/main.lua")();
+   end    
+})
+
+PlayerTab:AddButton({
+ Name = "Speed 32",
+ Callback = function()
+       local WalkSpeed = 32
 
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 32
+   end    
+})
 
-end) 
+PlayerTab:AddButton({
+ Name = "Speed 64",
+ Callback = function()
+       local WalkSpeed = 64
 
-Tab1Section:NewButton("Fly V3","LikeAndSubscribe",function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 64
+   end    
+})
 
-loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
+PlayerTab:AddButton({
+ Name = "Speed 128",
+ Callback = function()
+       local WalkSpeed = 128
 
-end) 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 128
+   end    
+})
 
-Tab2Section:NewButton("MM2 SCRIPT","LikeAndSubscribe",function()
+PlayerTab:AddButton({
+ Name = "Speed 256",
+ Callback = function()
+       local WalkSpeed = 256
 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 256
+   end    
+})
 
-loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
+PlayerTab:AddButton({
+ Name = "Speed 512",
+ Callback = function()
+       local WalkSpeed = 512
 
-end) 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 512
+   end    
+})
 
-Tab1Section:NewButton("NoClip [NO]","LikeAndSubscribe",function()
+PlayerTab:AddButton({
+ Name = "Show ShiftLock",
+ Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/shiftlock/main/shiftlock"))();
+   end    
+})
 
-local Workspace = game:GetService("Workspace")
-local CoreGui = game:GetService("CoreGui")
-local Players = game:GetService("Players")
-local Noclip = Instance.new("ScreenGui")
-local BG = Instance.new("Frame")
-local Title = Instance.new("TextLabel")
-local Toggle = Instance.new("TextButton")
-local StatusPF = Instance.new("TextLabel")
-local Status = Instance.new("TextLabel")
-local Plr = Players.LocalPlayer
-local Clipon = false
+PlayerTab:AddButton({
+ Name = "Btools",
+ Callback = function()
+        loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
+   end    
+})
 
-Noclip.Name = "Noclip"
-Noclip.Parent = game.CoreGui
+PlayerTab:AddButton({
+ Name = "Obby Auto Play All Game ",
+ Callback = function()
+       
+   end    
+})
 
-BG.Name = "BG"
-BG.Parent = Noclip
-BG.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
-BG.BorderColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
-BG.BorderSizePixel = 2
-BG.Position = UDim2.new(0.149479166, 0, 0.82087779, 0)
-BG.Size = UDim2.new(0, 210, 0, 127)
-BG.Active = true
-BG.Draggable = true
+OtherTab:AddButton({
+ Name = "Murder Mystery 2",
+ Callback = function()
+       loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
+   end    
+})
 
-Title.Name = "Title"
-Title.Parent = BG
-Title.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451)
-Title.BorderColor3 = Color3.new(0.180392, 0, 0.431373)
-Title.BorderSizePixel = 2
-Title.Size = UDim2.new(0, 210, 0, 33)
-Title.Font = Enum.Font.Highway
-Title.Text = "Noclip"
-Title.TextColor3 = Color3.new(1, 1, 1)
-Title.FontSize = Enum.FontSize.Size32
-Title.TextSize = 30
-Title.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
-Title.TextStrokeTransparency = 0
+OtherTab:AddButton({
+ Name = "Survive the Killer",
+ Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Milan08Studio/ChairWare/main/main.lua"))()
+   end    
+})
 
-Toggle.Parent = BG
-Toggle.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451)
-Toggle.BorderColor3 = Color3.new(0.180392, 0, 0.431373)
-Toggle.BorderSizePixel = 2
-Toggle.Position = UDim2.new(0.152380958, 0, 0.374192119, 0)
-Toggle.Size = UDim2.new(0, 146, 0, 36)
-Toggle.Font = Enum.Font.Highway
-Toggle.FontSize = Enum.FontSize.Size28
-Toggle.Text = "Toggle"
-Toggle.TextColor3 = Color3.new(1, 1, 1)
-Toggle.TextSize = 25
-Toggle.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
-Toggle.TextStrokeTransparency = 0
+OtherTab:AddButton({
+ Name = "Blade Ball",
+ Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Next1x/Bedol/main/Hub"))()
+   end    
+})
 
-StatusPF.Name = "StatusPF"
-StatusPF.Parent = BG
-StatusPF.BackgroundColor3 = Color3.new(1, 1, 1)
-StatusPF.BackgroundTransparency = 1
-StatusPF.Position = UDim2.new(0.314285725, 0, 0.708661377, 0)
-StatusPF.Size = UDim2.new(0, 56, 0, 20)
-StatusPF.Font = Enum.Font.Highway
-StatusPF.FontSize = Enum.FontSize.Size24
-StatusPF.Text = "Status:"
-StatusPF.TextColor3 = Color3.new(1, 1, 1)
-StatusPF.TextSize = 20
-StatusPF.TextStrokeColor3 = Color3.new(0.333333, 0.333333, 0.333333)
-StatusPF.TextStrokeTransparency = 0
-StatusPF.TextWrapped = true
+OtherTab:AddButton({
+ Name = "Prison life",
+ Callback = function()
+ loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Lucasfin000/Orbit-UI-Library/main/Library", true))()
+   end    
+})
 
-Status.Name = "Status"
-Status.Parent = BG
-Status.BackgroundColor3 = Color3.new(1, 1, 1)
-Status.BackgroundTransparency = 1
-Status.Position = UDim2.new(0.580952346, 0, 0.708661377, 0)
-Status.Size = UDim2.new(0, 56, 0, 20)
-Status.Font = Enum.Font.Highway
-Status.FontSize = Enum.FontSize.Size14
-Status.Text = "off"
-Status.TextColor3 = Color3.new(0.666667, 0, 0)
-Status.TextScaled = true
-Status.TextSize = 14
-Status.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
-Status.TextWrapped = true
-Status.TextXAlignment = Enum.TextXAlignment.Left
-
-
-Toggle.MouseButton1Click:connect(function()
-	if Status.Text == "off" then
-		Clipon = true
-		Status.Text = "on"
-		Status.TextColor3 = Color3.new(0,185,0)
-		Stepped = game:GetService("RunService").Stepped:Connect(function()
-			if not Clipon == false then
-				for a, b in pairs(Workspace:GetChildren()) do
-                if b.Name == Plr.Name then
-                for i, v in pairs(Workspace[Plr.Name]:GetChildren()) do
-                if v:IsA("BasePart") then
-                v.CanCollide = false
-                end end end end
-			else
-				Stepped:Disconnect()
-			end
-		end)
-	elseif Status.Text == "on" then
-		Clipon = false
-		Status.Text = "off"
-		Status.TextColor3 = Color3.new(170,0,0)
-	end
-end)
-
-end) 
-
-
- Tab1Section:NewButton("Admin ","LikeAndSubscribe",function()
- 
- loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
- 
- end) 
- 
- Tab1Section:NewButton(" EPS","LikeAndSubscribe",function()
- 
- loadstring(game:HttpGet"https://gitlab.com/te4224/Scripts/-/raw/main/Universal%20Aimbot%20N%20Esp/v2/main.lua")();
- 
- end)
- 
- Tab1Section:NewButton("AinBot ","LikeAndSubscribe",function()
- 
- 
- 
- end) 
- 
- Tab1Section:NewButton("Btools ","LikeAndSubscribe",function()
- 
- loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
- 
- end) 
- 
- Tab1Section:NewButton("Admin View  ","LikeAndSubscribe",function()
- 
- loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
- 
- end) 
- 
- Tab3Section:NewButton("Emojis ","LikeAndSubscribe",function()
- 
- loadstring(game:HttpGet("https://pastebin.com/raw/eCpipCTH"))()
- 
- end) 
- 
- Tab1Section:NewButton("Skin ","LikeAndSubscribe",function()
- 
- loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/UhGbaaaa/Copy-Skin/main/Copy%20Skin"))()
- 
- end) 
- 
- 
- Tab3Section:NewButton("Show ShiftLock","LikeAndSubscribe",function()
- 
- loadstring(game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/shiftlock/main/shiftlock"))();
- 
- end) 
- 
- Tab1Section:NewButton("keyboard","LikeAndSubscribe",function()
- 
- loadstring(game:HttpGet("https://gist.githubusercontent.com/RedZenXYZ/4d80bfd70ee27000660e4bfa7509c667/raw/da903c570249ab3c0c1a74f3467260972c3d87e6/KeyBoard%2520From%2520Ohio%2520Fr%2520Fr"))()
- 
- end) 
- 
- Tab3Section:NewButton("animations","Pro",function()
- 
- loadstring(game:HttpGet("https://gist.githubusercontent.com/RedZenXYZ/4d80bfd70ee27000660e4bfa7509c667/raw/da903c570249ab3c0c1a74f3467260972c3d87e6/KeyBoard%2520From%2520Ohio%2520Fr%2520Fr"))()
- 
- end) 
+new:AddButton({
+ Name = "MM2 EGG ⌚",
+ Callback = function()
+       loadstring(game:HttpGet('https://raw.githubusercontent.com/ToraScript/Script/main/EGGmm2'))()
+   end    
+})
+OrionLib:Init()
